@@ -35,6 +35,7 @@ export type WorkflowExecution = {
   execution: Maybe<Scalars['JSON']['output']>;
   context: Maybe<Scalars['JSON']['output']>;
   state: WorkflowExecutionStateEnum;
+  retention_time: Maybe<Scalars['Int']['output']>;
   created_at: Scalars['DateTime']['output'];
   updated_at: Scalars['DateTime']['output'];
   deleted_at: Maybe<Scalars['DateTime']['output']>;
@@ -175,6 +176,8 @@ export type Product = {
   metadata: Maybe<Scalars['JSON']['output']>;
   sales_channels_link: Maybe<Array<Maybe<LinkProductSalesChannel>>>;
   sales_channels: Maybe<Array<Maybe<SalesChannel>>>;
+  shipping_profiles_link: Maybe<LinkProductShippingProfile>;
+  shipping_profile: Maybe<ShippingProfile>;
 };
 
 export type ProductVariant = {
@@ -527,6 +530,7 @@ export type Customer = {
   deleted_at: Maybe<Scalars['DateTime']['output']>;
   carts: Maybe<Array<Maybe<Cart>>>;
   orders: Maybe<Array<Maybe<Order>>>;
+  account_holder_link: Maybe<LinkCustomerAccountHolder>;
 };
 
 export type SalesChannel = {
@@ -1799,6 +1803,7 @@ export type ShippingProfile = {
   created_at: Scalars['DateTime']['output'];
   updated_at: Scalars['DateTime']['output'];
   deleted_at: Maybe<Scalars['DateTime']['output']>;
+  products_link: Maybe<Array<Maybe<LinkProductShippingProfile>>>;
 };
 
 export enum NotificationStatusEnum {
@@ -2001,6 +2006,28 @@ export type LinkShippingOptionPriceSet = {
   deletedAt: Maybe<Scalars['String']['output']>;
 };
 
+export type LinkProductShippingProfile = {
+  __typename?: 'LinkProductShippingProfile';
+  product_id: Scalars['String']['output'];
+  shipping_profile_id: Scalars['String']['output'];
+  product: Maybe<Product>;
+  shipping_profile: Maybe<Fulfillment>;
+  createdAt: Scalars['String']['output'];
+  updatedAt: Scalars['String']['output'];
+  deletedAt: Maybe<Scalars['String']['output']>;
+};
+
+export type LinkCustomerAccountHolder = {
+  __typename?: 'LinkCustomerAccountHolder';
+  customer_id: Scalars['String']['output'];
+  account_holder_id: Scalars['String']['output'];
+  customer: Maybe<Customer>;
+  account_holder: Maybe<Payment>;
+  createdAt: Scalars['String']['output'];
+  updatedAt: Scalars['String']['output'];
+  deletedAt: Maybe<Scalars['String']['output']>;
+};
+
 declare module '@medusajs/framework/types' {
   interface RemoteQueryEntryPoints {
     workflow_execution: WorkflowExecution
@@ -2108,6 +2135,8 @@ declare module '@medusajs/framework/types' {
     payment_sessions: PaymentSession
     refund_reason: RefundReason
     refund_reasons: RefundReason
+    account_holder: any
+    account_holders: any
     order: Order
     orders: Order
     order_address: OrderAddress
@@ -2198,5 +2227,9 @@ declare module '@medusajs/framework/types' {
     sales_channel_locations: LinkSalesChannelStockLocation
     shipping_option_price_set: LinkShippingOptionPriceSet
     shipping_option_price_sets: LinkShippingOptionPriceSet
+    product_shipping_profile: LinkProductShippingProfile
+    product_shipping_profiles: LinkProductShippingProfile
+    customer_account_holder: LinkCustomerAccountHolder
+    customer_account_holders: LinkCustomerAccountHolder
   }
 }
