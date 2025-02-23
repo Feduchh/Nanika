@@ -2144,7 +2144,7 @@
   resolved "https://registry.npmjs.org/@medusajs/locking/-/locking-2.5.0.tgz"
   integrity sha512-3X08rQxC78pLlax9AyUkaQdODQaRM7zWRL+RCb7PxLisTZ+D58nSa7CAtaoDCMl06n4W3f4MLqVgnAjOzdKFjQ==
 
-"@medusajs/medusa@^1.12.0", "@medusajs/medusa@^2.5.0", "@medusajs/medusa@~2.4.0":
+"@medusajs/medusa@^1.12.0", "@medusajs/medusa@^2.4.0", "@medusajs/medusa@~2.4.0":
   version "2.5.0"
   resolved "https://registry.npmjs.org/@medusajs/medusa/-/medusa-2.5.0.tgz"
   integrity sha512-0iqEM5Hi0aq1HrwkrHPMuJabYP3+LAphwwvZDjmP0vYVE/i21YIgg/DFVGFujNHFLxT/EGmNWApqKD4HoPLFXA==
@@ -2229,22 +2229,6 @@
     pg "^8.11.2"
     resolve-cwd "^3.0.0"
 
-"@medusajs/modules-sdk@^1.12.3":
-  version "1.12.12"
-  resolved "https://registry.npmjs.org/@medusajs/modules-sdk/-/modules-sdk-1.12.12.tgz"
-  integrity sha512-27Uc75N+pS490BL6/j8BeM4OyEFlSQQWq2UW07p9GEF7GXXdCJRM5p7S/ZcTAZ61pCKpnQBNiS4qOkb/vhnJwg==
-  dependencies:
-    "@graphql-tools/merge" "^9.0.0"
-    "@graphql-tools/schema" "^10.0.0"
-    "@medusajs/orchestration" "^0.5.8"
-    "@medusajs/types" "^1.11.17"
-    "@medusajs/utils" "^1.11.10"
-    awilix "^8.0.0"
-    graphql "^16.6.0"
-    knex "2.4.2"
-    pg "^8.11.2"
-    resolve-cwd "^3.0.0"
-
 "@medusajs/modules-sdk@~2.4.0":
   version "2.4.0"
   resolved "https://registry.npmjs.org/@medusajs/modules-sdk/-/modules-sdk-2.4.0.tgz"
@@ -2270,16 +2254,6 @@
   version "2.5.0"
   resolved "https://registry.npmjs.org/@medusajs/notification/-/notification-2.5.0.tgz"
   integrity sha512-yoyO4LCQC/0SCs744OH4BKA5Oo3roPb56YLq7swHm0gMFLdNgcR9w0uYju7kWRTOh9LLtyzKv0UxpcqMNFU3tA==
-
-"@medusajs/orchestration@^0.4.4":
-  version "0.4.4"
-  resolved "https://registry.npmjs.org/@medusajs/orchestration/-/orchestration-0.4.4.tgz"
-  integrity sha512-JRS2g4DX8POn8b5W6vTBE3yvQuDF5VPOMS1e4Owhg9hjJ6p+mIuPju7RheKj6dZ2KtQjPT5sCSHpscVUca/z1w==
-  dependencies:
-    "@medusajs/types" "^1.11.6"
-    "@medusajs/utils" "^1.10.5"
-    awilix "^8.0.0"
-    graphql "^16.6.0"
 
 "@medusajs/orchestration@^0.5.8":
   version "0.5.8"
@@ -2399,7 +2373,7 @@
     get-port "^5.1.0"
     randomatic "^3.1.1"
 
-"@medusajs/types@^1.11.17", "@medusajs/types@^1.11.6":
+"@medusajs/types@^1.11.17":
   version "1.11.17"
   resolved "https://registry.npmjs.org/@medusajs/types/-/types-1.11.17.tgz"
   integrity sha512-EKrG1aU0b6es1KlKhCSU2ptwJuHVB0EEiHd35IaIcDyx8ZVjIMscpDOhCSl5efAiRlr3I5kqWIbdSakDIF2Smw==
@@ -2444,7 +2418,7 @@
   dependencies:
     jsonwebtoken "^9.0.2"
 
-"@medusajs/utils@^1.10.5", "@medusajs/utils@^1.11.0", "@medusajs/utils@^1.11.10":
+"@medusajs/utils@^1.11.10":
   version "1.11.11"
   resolved "https://registry.npmjs.org/@medusajs/utils/-/utils-1.11.11.tgz"
   integrity sha512-r4u1Ctgwt0LftnAHggTfU7RgNppdwY6DfQaefxSrPRSCBMniU6p7j9Lv1G7DkTXZd79V9UNJuixqtlFezGC1tA==
@@ -2504,17 +2478,6 @@
     "@medusajs/orchestration" "~2.4.0"
     "@medusajs/types" "~2.4.0"
     "@medusajs/utils" "~2.4.0"
-    ulid "^2.3.0"
-
-"@medusajs/workflows@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.npmjs.org/@medusajs/workflows/-/workflows-0.3.0.tgz"
-  integrity sha512-ONb2mXaFTnk+Y4iP3p/lYxzrvar8u/mZBtDMszxbiEcov5SQzOYkNNxOu859QgHuhUJztTk3Xhcyfhkr1QztEA==
-  dependencies:
-    "@medusajs/modules-sdk" "^1.12.3"
-    "@medusajs/orchestration" "^0.4.4"
-    "@medusajs/utils" "^1.11.0"
-    awilix "^8.0.1"
     ulid "^2.3.0"
 
 "@mikro-orm/cli@6.4.3":
